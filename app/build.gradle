@@ -19,10 +19,10 @@ repositories {
 android {
     signingConfigs {
         release {
-            keyAlias 'minminguard'
-            keyPassword System.getenv("KEYSTORE_PASS")
-            storeFile file('minminguard.keystore')
-            storePassword System.getenv("KEY_PASS")
+            keyAlias 'android'
+            keyPassword System.getenv('ANDROID_KEYSTORE_PASS')
+            storeFile file(System.getenv('ANDROID_KEYSTORE_FILE'))
+            storePassword System.getenv('ANDROID_KEYSTORE_PASS')
         }
         debug {
             storeFile file("debug.keystore")
